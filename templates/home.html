@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<center>
+    <h1>Hello {{name}}</h1>
+    <form action="bmi" method='post'>
+
+        {% csrf_token %}
+        Weight of a person:<input type="text" name="weight">
+        Height of a person:<input type="text" name="height">
+
+        <input type="submit">
+    </form>
+</center>
+{% endblock %}
